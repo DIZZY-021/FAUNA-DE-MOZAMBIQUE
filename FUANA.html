@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data: ,">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE.css">
+    <title>FAUNA DE MOÇAMBIQUE</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-icone">🐾</span>
+                <div>
+                    <strong>FAUNA SELVAGEM</strong>
+                    <small>DE MOÇAMBIQUE</small>
+                </div>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">🏠 Início</a></li>
+                <li><a href="#animais">🐾 Animais</a></li>
+                <li><a href="#explorar">🧭 Explorar</a></li>
+                <li><a href="#sobre">ⓘ Sobre</a></li>
+                <li><a href="#contato">✉ Contacto</a></li>
+                <li><a href="#" id="btnAdmin">⚙️ Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-conteudo">
+                <h1>Enciclopédia Digital Interactiva</h1>
+                <p>Descubra, aprenda e explore a incrível diversidade da fauna selvagem de Moçambique.</p>
+                <button id="btnExplorar">🌿 Conhecer a nossa biodiversidade</button>
+            </div>
+        </section>
+
+        <section class="area-principal" id="explorar">
+            <div class="barra-pesquisa">
+                <input type="text" id="pesquisa" placeholder="Pesquisar animal...">
+                <button class="btn-filtro" id="btnTodos">Todos os tipos</button>
+                <button class="btn-filtro" id="btnMamifero"> Mamíferos</button>
+                <button class="btn-filtro" id="btnAve"> Aves</button>
+                <button class="btn-filtro" id="btnReptil"> Répteis</button>
+                <button class="btn-filtro" id="btnAquatico"> Aquáticos</button>
+                <button class="btn-filtro" id="btnSugerir">+ Sugerir Animal</button>
+                <button class="btn-limpar" id="btnLimparFiltros">↻ Limpar filtros</button>
+            </div>
+
+            <div class="contadores">
+                <div class="contador-card"><span></span><strong id="totalAnimais">0</strong><p>Total de Animais</p></div>
+                <div class="contador-card"><span></span><strong id="totalMamiferos">0</strong><p>Mamíferos</p></div>
+                <div class="contador-card"><span></span><strong id="totalAves">0</strong><p>Aves</p></div>
+                <div class="contador-card"><span></span><strong id="totalRepteis">0</strong><p>Répteis</p></div>
+                <div class="contador-card"><span></span><strong id="totalPerigo">0</strong><p>Em Perigo</p></div>
+            </div>
+
+            <div class="conteudo-flex" id="animais">
+                <div class="lado-esquerdo">
+                    <h2>Animais de Moçambique</h2>
+                    <p id="contadorAnimais">Total de animais: 0</p>
+                    <div class="cards"></div>
+                </div>
+
+                <aside class="ficha-lateral fechada" id="fichaLateral">
+                    <button id="fecharFicha" title="Fechar ficha">×</button>
+                    <div id="infoModal" class="info-lateral">
+                        <h3>Selecione um animal</h3>
+                        <p>Clique em <strong>Ver ficha</strong> num card para ver as informações aqui no lado direito.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre o Projeto</h2>
+            <p>
+                A Fauna de Moçambique é uma enciclopédia digital interactiva criada para divulgar informações
+                sobre animais selvagens encontrados em Moçambique, promovendo conhecimento, educação ambiental
+                e valorização da biodiversidade nacional.
+            </p>
+            <h3>Tecnologias Utilizadas</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>LocalStorage</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contacto</h2>
+            <div class="info-contato">
+             <img src="imagens/minha-foto.jpg"  class="foto-contato">
+                <p><strong>Nome: </strong>Osvaldo Hermínio Muteque Jange</p>
+                <p><strong>Email: </strong>osvaldoherminio444@gmail.com</p>
+                <p><strong>Telefone: </strong>878558240</p>
+             <p class="linha-instagram"><strong>Instagram: </strong><a href="https://www.instagram.com/osvaldo_021d?igsh=MTZ2MzQxYWc3Mzc5Ng==" target="_blank" class="link-instagram" aria-label="Instagram de Osvaldo">
+                    <svg class="icone-instagram" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.7 2.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                    <span>OSVALDO_021D</span>
+                </a></p>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal"><div class="modal-conteudo"><button id="fecharModal">X</button><div></div></div></div>
+
+    <div id="modalSugestao" class="modal">
+        <div class="modal-conteudo">
+            <button id="fecharSugestao">X</button>
+            <h2>Sugerir Novo Animal</h2>
+            <form id="formSugestao">
+                <label for="nomeAnimal">Nome do Animal:</label>
+                <input type="text" id="nomeAnimal" name="nomeAnimal" required>
+
+                <label for="nomeCientifico">Nome Científico:</label>
+                <input type="text" id="nomeCientifico" name="nomeCientifico">
+
+                <label for="categoriaAnimal">Categoria:</label>
+                <select id="categoriaAnimal" name="categoriaAnimal" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Mamífero">Mamífero</option>
+                    <option value="Réptil">Réptil</option>
+                    <option value="Ave">Ave</option>
+                    <option value="Aquático">Aquático</option>
+                </select>
+
+                <label for="habitatAnimal">Habitat</label>
+                <input type="text" id="habitatAnimal" required>
+
+                <label for="alimentacaoAnimal">Alimentação</label>
+                <input type="text" id="alimentacaoAnimal" required>
+
+                <label for="distribuicaoAnimal">Distribuição em Moçambique</label>
+                <input type="text" id="distribuicaoAnimal" required>
+
+                <label for="conservacaoAnimal">Estado de conservação</label>
+                <input type="text" id="conservacaoAnimal" required>
+
+                <label for="curiosidadeAnimal">Curiosidade</label>
+                <textarea id="curiosidadeAnimal"></textarea>
+
+                <label for="imagemAnimal">URL da imagem</label>
+                <input type="text" id="imagemAnimal" required>
+
+                <label for="videoAnimal">Caminho do Video</label>
+                <input type="text" id="videoAnimal">
+                
+                <label for="somAnimal">Caminho do Som</label>
+                <input type="text" id="somAnimal">
+
+                <button type="submit" id="btnEnviarSugestao">Enviar Sugestão</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalVideo" class="modal">
+        <div class="modal-conteudo modal-video">
+            <button id="fecharVideo">X</button>
+            <h3 id="tituloVideo"></h3>
+            <video id="videoPlayer" controls width="100%"></video>
+        </div>
+    </div>
+
+    <div id="modalAdmin" class="modal">
+        <div class="modal-conteudo">
+            <button id="fecharAdmin">X</button>
+            <h2>Painel Administrativo</h2>
+            <label>Usuário</label>
+            <input type="text" id="usuarioAdmin" placeholder="Digite o usuário">
+            <label>Senha</label>
+            <input type="password" id="senhaAdmin" placeholder="Digite a senha">
+            <button id="btnEntrar">Entrar</button>
+        </div>
+    </div>
+
+    <div id="painelAdmin" class="modal">
+        <div class="modal-conteudo modal-admin-lista">
+            <button id="fecharPainel">X</button>
+            <h2>Painel do Administrador</h2>
+            <h3>Sugestões Pendentes</h3>
+            <div id="listaSugestoes"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h3>🌿 Fauna Selvagem de Moçambique</h3>
+            <p>Conhecer para valorizar. Proteger para o futuro.</p>
+        </div>
+        <div>
+            <p>Projeto final de HTML, CSS e JavaScript</p>
+            <p>Desenvolvido por Osvaldo Hermínio Muteque Jange</p>
+            
+        </div>
+    </footer>
+
+    <script src="SCRIPT.js"></script>
+</body>
+</html>
